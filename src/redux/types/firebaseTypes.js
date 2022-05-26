@@ -2,5 +2,7 @@ export const firebaseTypes =  {
     create: 'create',
     read: 'read',
     edit: 'edit',
-    delete: 'delete'
+    delete: 'delete',
+
+    price: 'price'
 }

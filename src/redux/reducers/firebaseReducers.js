@@ -1,7 +1,8 @@
 import { firebaseTypes } from "../types/firebaseTypes"
 
 const initialState = {
-    recipe: []
+    recipe: [],
+    price: []
 }
 
 export const firebaseReducers = (state = initialState, action) => {
@@ -9,6 +10,11 @@ export const firebaseReducers = (state = initialState, action) => {
         case firebaseTypes.read:
             return {
                 recipe: [...action.payload]
+            }
+        case firebaseTypes.price:
+            return {
+                ...state,
+                price:  [...action.payload ]
             }
             default:
                 return state

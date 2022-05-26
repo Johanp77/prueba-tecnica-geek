@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { readRecipeAsync } from '../redux/actions/firebaseActions';
 import { ButtonBase, Checkbox, Grid, TextField, Typography } from '@mui/material';
 import './styles/tableStyles.css'
+import Home from './Home';
 
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
@@ -14,31 +15,37 @@ const TableProducts = () => {
 
   const [ingredients, setIngredients] = useState(false)
 
+  const [value, setValue] = useState('1')
+
 
   const { recipe } = useSelector(store => store.firebaseReducers)
   console.log(recipe)
   useEffect(() => {
     dispatch(readRecipeAsync())
   }, [dispatch])
-
+  const myElement = <Home brand="Ford" />
   return (
-
+    myElement,
+    console.log(value),
     <div>
+
       <form>
         {
           recipe.map((p, index) => (
             <>
-              <div key={index}>
+              <div key={index} className="father">
                 <div>
                   <Grid container spacing={2} >
                     <Grid item>
                       <ButtonBase sx={{ width: 128, height: 128 }}>
                         <Checkbox {...label} defaultChecked />
                         <TextField
+                          onChange={ event=> setValue(event.target.value)}
                           id="outlined-number"
                           label="Number"
                           type="number"
                           defaultValue="1"
+                          min="0"
                           InputLabelProps={{
                             shrink: true,
                           }}

@@ -1,4 +1,16 @@
 
-.bg-color{
-    background-color: #b4b3b3;
+
+.father{
+    /* box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); */
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #4758f1;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #4758f1;
 }
+
+.bg-color{
+    background-color: #e2dede;
+}
+

@@ -1,0 +1,27 @@
+.cabecera_title{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+
+.cabecera_p{
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+
+.cabecera_span{
+    color: #4758f1;
+}
+
+.button_comprar{
+    background-color: #0e7c1d;
+    padding: 0.5em 1em ;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    
+}
