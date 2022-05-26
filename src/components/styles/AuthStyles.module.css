@@ -1,0 +1,76 @@
+
+.container_register_login{
+    overflow: auto;
+    background-color: rgb(227, 228, 228);
+    width: 50vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    align-items: center;
+    border: 1px solid #828582;
+    border-radius: 5px;
+}
+
+.container_login{
+    overflow: auto;
+    background-color: rgb(227, 228, 228);
+    width: 50vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2em auto;
+    align-items: center;
+    border: 1px solid #828582;
+    border-radius: 5px;
+}
+
+
+.inputs{
+    margin: 1rem;
+}
+
+.h2_login{
+    text-align: center
+}
+
+.center_button_login{
+    text-align: center;
+}
+.button_login{
+    background-color: #05460e;
+    padding: 0.5em 1em ;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 1.2em;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.button_login:hover{
+    background-color: #0ebb42;
+    color: white;
+}
+
+.container_social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.container_register{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.h1_register{
+    text-align: center;
+}

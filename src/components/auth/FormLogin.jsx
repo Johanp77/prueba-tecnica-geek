@@ -1,7 +1,9 @@
+import { TextField } from '@mui/material'
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import useForm from '../../hooks/useForm'
 import { loginAsync } from '../../redux/actions/loginActions'
+import styles from '../styles/AuthStyles.module.css';
 
 
 
@@ -25,16 +27,31 @@ const FormLogin = () => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <h2>Inicia Sesión </h2>
-                <div className="form-group">
-                    <label>Correo Electrónico</label>
-                    <input type="email" name="email" value={email} onChange={handleInputChange} required />
+                <h2 className={styles.h2_login}>Inicia Sesión </h2>
+                <div className={styles.inputs}>
+                    <TextField
+                        required
+                        type="email"
+                        id="outlined-required"
+                        label="Email"
+                        name="email"
+                        value={email} onChange={handleInputChange}
+                    />
                 </div>
-                <div className="campo3">
-                    <label>Contraseña</label>
-                    <input type="password" name="password1" value={password1} onChange={handleInputChange} required minLength="6"/>
+                <div className={styles.inputs}>
+                <TextField
+                        required
+                        minLength="6"
+                        type="password"
+                        id="outlined-required"
+                        label="Contraseña"
+                        name="password1"
+                        value={password1} onChange={handleInputChange}
+                    />
                 </div>
-                <button>Iniciar Sesión</button>
+                <div className={styles.center_button_login}>
+                <button className={styles.button_login}>Iniciar Sesión</button>
+                </div>
             </form>
         </div>
     )

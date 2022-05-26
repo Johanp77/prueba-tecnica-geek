@@ -5,7 +5,7 @@ import TableProducts from './TableProducts'
 import styled from 'styled-components'
 import styles from './styles/Home.module.css'
 import CustomizedSnackbars from './AlertComp'
-
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 const Home = (props) => {
@@ -15,6 +15,7 @@ const Home = (props) => {
         console.log(props.value),
         <div>
             <div className="cabecera">
+            <LogoutIcon sx={{cursor: 'pointer'}} onClick={() => dispatch(logoutAsync())}/>
                 <p className={styles.cabecera_p}>INGREDIENTES</p>
                 <h1 className={styles.cabecera_title}>Risotto de setas(vegano)</h1>
                 <span className={styles.cabecera_span}>Seleccionar todo</span> <span className={styles.cabecera_span}>|</span> <span className={styles.cabecera_span}>Deseleccionar todo</span>
@@ -30,7 +31,7 @@ const Home = (props) => {
                 {/* <button className={styles.button_comprar} >Comprar Ingredientes</button> */}
             </div>
             <CustomizedSnackbars />
-            <button onClick={() => dispatch(logoutAsync())}>Cerrar Sesión</button>
+
 
         </div>
     )
